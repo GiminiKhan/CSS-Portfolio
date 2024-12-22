@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   github
 }) => {
   return (
-    <div className={styles.card}>
+    <div  id = "projects" className= {styles.card}>
       <div className={styles.imageContainer}>
         <Image
           src={image}

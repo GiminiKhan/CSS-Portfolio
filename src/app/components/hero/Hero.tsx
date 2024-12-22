@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className={styles.textContent}>
           <span className={styles.greeting}>Myself</span>
           <h1 className={styles.title}>
-            <span className={styles.name}>Your Name</span>
+            <span className={styles.name}>Qurat Khan</span>
             <span className={styles.role}>Full Stack Developer</span>
           </h1>
           <p className={styles.description}>
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
         <div className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
             <Image
-              src="/project/face.webp" // Add your image path here
+              src="/project/banner_bg.png" // Add your image path here
               alt="Developer Profile"
               width={400}
               height={400}

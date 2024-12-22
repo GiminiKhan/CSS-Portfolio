@@ -2,7 +2,7 @@ import Layout from '../Layout';
 
 const About = () => (
   <Layout>
-    <section>
+    <section id = "about">
       <h1>About Me</h1>
       <p>
         I am a passionate web developer with experience in building dynamic and responsive websites using modern technologies.

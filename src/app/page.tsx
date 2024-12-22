@@ -4,6 +4,7 @@ import ProjectCard from '../app/components/PorjectCard';
 import projects from '../app/components/data/projects';
 import styles from '@/app/styles/page.module.css';
 import Hero from './components/hero/Hero';
+import Contact from './components/contact/Contact';
 
 const Home: React.FC = () => (
   <Layout>
@@ -14,18 +15,18 @@ const Home: React.FC = () => (
         <p className={styles.subtitle}>Explore my latest projects and works</p>
       </header>
 
-      <section className={styles.projectsSection}>
+      <section className={styles.ProjectsSection}>
         <h2 className={styles.sectionTitle}>My Projects</h2>
-        <div className={styles.projectsGrid}>
-          {projects.map((project) => (
+        <div className={styles.ProjectsGrid}>
+          {projects.map((Project) => (
             <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              image={project.image}
-              technologies={project.technologies}
-              github={project.github}
+              key={Project.id}
+              title={Project.title}
+              description={Project.description}
+              link={Project.link}
+              image={Project.image}
+              technologies={Project.technologies}
+              github={Project.github}
             />
           ))}
         </div>
@@ -34,7 +35,7 @@ const Home: React.FC = () => (
       <section className={styles.aboutSection}>
         <h2 className={styles.sectionTitle}>About Me</h2>
         <p className={styles.aboutText}>
-          I'm a passionate developer with expertise in web technologies. 
+          I am a passionate developer with expertise in web technologies. 
           I love creating innovative solutions and learning new skills.
         </p>
       </section>
@@ -48,6 +49,7 @@ const Home: React.FC = () => (
           Contact Me
         </a>
       </section>
+      <Contact/>
     </div>
   </Layout>
 );

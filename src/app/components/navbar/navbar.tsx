@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.navLogo}>
-          YourLogo
+          Qurat
         </Link>
 
         <div className={styles.menuIcon} onClick={toggleMenu}>
@@ -26,22 +26,22 @@ const Navbar: React.FC = () => {
 
         <ul className={`${styles.navMenu} ${isOpen ? styles.active : ''}`}>
           <li className={styles.navItem}>
-            <Link href="/" className={styles.navLink}>
+            <Link href="#" className={styles.navLink}>
               Home
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/projects" className={styles.navLink}>
+            <Link href="#projects" className={styles.navLink}>
               Projects
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/about" className={styles.navLink}>
+            <Link href="#about" className={styles.navLink}>
               About
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/contact" className={styles.navLink}>
+            <Link href="#contact" className={styles.navLink}>
               Contact
             </Link>
           </li>
