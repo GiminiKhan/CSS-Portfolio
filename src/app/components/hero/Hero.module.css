@@ -1,0 +1,351 @@
+/* components/Hero.module.css */
+.heroSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--background-start-rgb), 1) 0%,
+      rgba(var(--background-end-rgb), 1) 100%
+    );
+  }
+  
+  .heroContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .textContent {
+    animation: slideUp 0.8s ease forwards;
+  }
+  
+  .greeting {
+    font-size: 1.2rem;
+    color: var(--accent-color, #647a75);
+    margin-bottom: 1rem;
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .title {
+    margin-bottom: 2rem;
+  }
+  
+  .name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary, #e6f1ff);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role {
+    font-size: 2.5rem;
+    color: var(--text-secondary, #8892b0);
+    display: block;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: var(--text-secondary, #8892b0);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 540px;
+  }
+  
+  .cta {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .primary {
+    background-color: var(--accent-color, #2d3332);
+    color: var(--background, #0a192f);
+    border: none;
+  }
+  
+  .primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 51, 50, 0.3);
+  }
+  
+  .secondary {
+    background-color: transparent;
+    color: var(--accent-color, #647a75);
+    border: 1px solid var(--accent-color, #647a75);
+  }
+  
+  .secondary:hover {
+    background-color: rgba(100, 122, 117, 0.1);
+  }
+  
+  .imageWrapper {
+    position: relative;
+    animation: slideIn 0.8s ease forwards;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .profileImage {
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .backgroundElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--accent-color, #647a75);
+    border-radius: 50%;
+    top: -20px;
+    right: -20px;
+    animation: rotate 20s linear infinite;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(var(--accent-color, #647a75) 2px, transparent 2px);
+    background-size: 10px 10px;
+    animation: fade 3s ease-in-out infinite alternate;
+  }
+  
+  .square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--accent-color, #647a75);
+    top: 50%;
+    left: -75px;
+    transform: rotate(45deg);
+    animation: rotate 15s linear infinite reverse;
+  }
+  
+  /* Animations */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .heroContent {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+  
+    .textContent {
+      order: 2;
+    }
+  
+    .imageWrapper {
+      order: 1;
+      margin: 0 auto;
+    }
+  
+    .description {
+      margin: 0 auto 2rem;
+    }
+  
+    .cta {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroSection {
+      padding: 4rem 1rem;
+    }
+  
+    .name {
+      font-size: 2.5rem;
+    }
+  
+    .role {
+      font-size: 1.8rem;
+    }
+  
+    .imageContainer {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta {
+      flex-direction: column;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  
+    .imageContainer {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  /* components/Hero.module.css */
+/* ... (previous styles remain the same) */
+
+.greeting {
+    font-size: 1.2rem;
+    color: #333; /* Updated to match your scheme */
+    margin-bottom: 1rem;
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .title {
+    margin-bottom: 2rem;
+  }
+  
+  .name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333; /* Updated to match your scheme */
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role {
+    font-size: 2.5rem;
+    color: #444; /* Updated to match your scheme */
+    display: block;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #666; /* Updated to match your scheme */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 540px;
+  }
+  
+  /* Button styles update */
+  .primary {
+    background-color: #0070f3; /* Updated to match your scheme */
+    color: white;
+    border: none;
+  }
+  
+  .primary:hover {
+    transform: translateY(-2px);
+    background-color: #0051bb; /* Darker shade for hover */
+    box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
+  }
+  
+  .secondary {
+    background-color: transparent;
+    color: #333; /* Updated to match your scheme */
+    border: 1px solid #333;
+  }
+  
+  .secondary:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+  }
+  
+  /* Update geometric elements colors */
+  .circle {
+    border: 2px solid #0070f3; /* Updated to match your scheme */
+  }
+  
+  .dots {
+    background-image: radial-gradient(#0070f3 2px, transparent 2px); /* Updated to match your scheme */
+  }
+  
+  .square {
+    border: 2px solid #0070f3; /* Updated to match your scheme */
+  }
+  
+
+  

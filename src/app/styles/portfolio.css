@@ -1,0 +1,71 @@
+body {
+    background-color: #1a1a1d;
+    color: #c5c6c7;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  a {
+    color: #66fcf1;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .header, .footer {
+    background-color: #0b0c10;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1, .footer p {
+    margin: 0;
+    color: #45a29e;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  
+  .nav-link {
+    margin: 0 10px;
+    color: #66fcf1;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #45a29e;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .project-card {
+    background-color: #0b0c10;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-title {
+    color: #66fcf1;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    margin-bottom: 10px;
+  }
+  
