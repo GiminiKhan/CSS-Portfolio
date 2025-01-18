@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.navLogo}>
-          Qurat
+          QK
         </Link>
 
         <div className={styles.menuIcon} onClick={toggleMenu}>

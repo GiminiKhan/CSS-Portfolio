@@ -12,7 +12,7 @@ const Home: React.FC = () => (
         <h1 className={styles.title}>Welcome to My Portfolio</h1>
       <Hero />
       <header className={styles.header}>
-        <p className={styles.subtitle}>Explore my latest projects and works</p>
+        <p  id = "projects" className={styles.subtitle}>Explore my latest projects and works</p>
       </header>
 
       <section className={styles.ProjectsSection}>
