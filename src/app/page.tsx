@@ -5,6 +5,8 @@ import projects from '../app/components/data/projects';
 import styles from '@/app/styles/page.module.css';
 import Hero from './components/hero/Hero';
 import Contact from './components/contact/Contact';
+import About from './components/about/About';
+
 
 const Home: React.FC = () => (
   <Layout>
@@ -31,16 +33,21 @@ const Home: React.FC = () => (
           ))}
         </div>
       </section>
-
-      <section className={styles.aboutSection}>
+<div>
+      <section id ="about" className={styles.aboutSection}>
         <h2 className={styles.sectionTitle}>About Me</h2>
         <p className={styles.aboutText}>
           I am a passionate developer with expertise in web technologies. 
           I love creating innovative solutions and learning new skills.
         </p>
+    
       </section>
+      <About />
 
-      <section className={styles.contactSection}>
+</div>
+
+
+      <section id = "contact" className={styles.contactSection}>
         <h2 className={styles.sectionTitle}>Get in Touch</h2>
         <p className={styles.contactText}>
           Interested in working together? Feel free to reach out!

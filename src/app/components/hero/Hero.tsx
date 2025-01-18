@@ -17,14 +17,15 @@ const Hero: React.FC = () => {
             I build exceptional digital experiences and transform ideas into reality
             through elegant and efficient code.
           </p>
-          {/* <div className={styles.cta}>
+          <div className={styles.cta}>
             <button className={`${styles.button} ${styles.primary}`}>
               View Projects
             </button>
-            <button className={`${styles.button} ${styles.secondary}`}>
+            <div className={styles.cta}></div>
+            <button className={`${styles.button} ${styles.primary}`}>
               Contact Me
             </button>
-          </div> */}
+          </div>
         </div>
 
         <div className={styles.imageWrapper}>

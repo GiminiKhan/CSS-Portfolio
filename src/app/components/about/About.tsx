@@ -1,8 +1,8 @@
 import Layout from '../Layout';
 
 const About = () => (
-  <Layout>
-    <section id = "about">
+ //<Layout>
+    <section>
       <h1>About Me</h1>
       <p>
         I am a passionate web developer with experience in building dynamic and responsive websites using modern technologies.
@@ -11,7 +11,7 @@ const About = () => (
         I specialize in JavaScript, React, and Next.js, and I have a knack for creating visually appealing and user-friendly interfaces.
       </p>
     </section>
-  </Layout>
+  //</Layout>
 );
 
 export default About;

@@ -3,7 +3,7 @@ import React from "react";
 
 const Contact = () => (
   // <Layout>
-    <section id="contact">
+    <section>
       <h1>Contact</h1>
       <p>
         Feel free to reach out to me via email at{" "}
