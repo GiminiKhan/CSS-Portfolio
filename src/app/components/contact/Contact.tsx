@@ -1,8 +1,8 @@
-import Layout from "../Layout";
+
 import React from "react";
 
 const Contact = () => (
-  // <Layout>
+
     <section>
       <h1>Contact</h1>
       <p>
@@ -11,7 +11,7 @@ const Contact = () => (
         through my social media channels.
       </p>
     </section>
-  // </Layout>
+  
 );
 
 export default Contact;
